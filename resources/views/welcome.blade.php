@@ -1,7 +1,7 @@
 @extends('layouts.app')
 @section('content')
 
-<div class="jumbotron p-5 mb-4 bg-light rounded-3">
+<div class="jumbotron p-5 mb-4 bg-danger text-white rounded-3">
     <div class="container py-5">
     
         <h1 class="display-5 fw-bold">
@@ -13,8 +13,8 @@
 </div>
 
 <div class="content">
-    <div class="container bg-dark text- white">
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempora temporibus, dicta nemo aliquam totam nisi deserunt soluta quas voluptatum ab beatae praesentium necessitatibus minus, facilis illum rerum officiis accusamus dolores!</p>
+    <div class="container bg-dark text-white">
+        <p>Login in order to access all of its features!</p>
     </div>
 </div>
 @endsection
