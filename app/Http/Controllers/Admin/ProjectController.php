@@ -39,6 +39,7 @@ class ProjectController extends Controller
      */
     public function store(StoreProjectRequest $request)
     {
+        // da autorizzare
         // $data = $request->all();
         // $project = new Project();
         // $project->fill($data);
@@ -78,6 +79,7 @@ class ProjectController extends Controller
      */
     public function update(UpdateProjectRequest $request, Project $project)
     {
+        // da autorizzare
         // $data = $request->all();
         // $project->update($data);
         // return redirect()->route("admin.projects.show", $project->slug);

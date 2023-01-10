@@ -14,7 +14,7 @@
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
 
-    <!-- Usando Vite -->
+    <!-- Vite -->
     @vite(['resources/js/app.js'])
 </head>
 <body>
@@ -53,7 +53,7 @@
                             <li class="nav-item">
                                 <a class="nav-link text-white {{ Route::currentRouteName() === 'admin.dashboard' ? 'bg-secondary' : '' }}"
                                     href="{{ route('admin.dashboard') }}">
-                                    <i class="fa-solid fa-tachometer-alt fa-lg fa-fw"></i>
+                                    <i class="fa-solid fa-tents"></i>
                                     Dashboard
                                 </a>
                             </li>
@@ -69,9 +69,12 @@
                 </nav>
 
         {{-- /Sidebar --}}
+        {{-- Main--}}
         <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
             @yield('content')
         </main>
+        {{--/ Main--}}
+
     </div>
     
 </body>
