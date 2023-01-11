@@ -10,6 +10,28 @@ body {
     height: 100%;
 }
 
+//welcome-JUMBOTRON
+.myjumbotron {
+    position: relative;
+    width: 100%;
+    margin-bottom: 2em;
+}
+
+.myjumbotron > img {
+    width: 100% !important;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+}
+
+.myjumbotron > .container,
+h1,
+p {
+    position: relative;
+    z-index: 1 !important;
+}
+
 //DASHBOARD
 .dashboard-icons {
     margin-top: 2em;
