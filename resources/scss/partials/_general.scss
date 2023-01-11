@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Encode+Sans+Condensed:wght@100;200;300;400;500;600;700&display=swap");
 
 body {
+    position: relative;
     font-size: 100%;
     font-family: "Encode Sans Condensed", sans-serif !important;
 }
@@ -15,6 +16,7 @@ body {
     position: relative;
     width: 100%;
     margin-bottom: 2em;
+    height: max-content;
 }
 
 .myjumbotron > img {
@@ -23,12 +25,16 @@ body {
     top: 0;
     left: 0;
     z-index: 0;
+    object-fit: cover;
+    // aspect-ratio: 1 /5;
 }
 
 .myjumbotron > .container,
 h1,
 p {
     position: relative;
+    bottom: 0;
+    left: 0;
     z-index: 1 !important;
 }
 

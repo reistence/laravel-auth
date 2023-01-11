@@ -2,7 +2,7 @@
 @section('content')
 <div class="container mt-4">
     <div class="container">
-        <h1 class="class="text-center mt-3">Edit: {{$project->title}}</h1>
+        <h1 class="text-center mt-3 text-danger fw-bold">Edit: {{$project->title}}</h1>
          <div class="row justify-content-center">
              <div class="col-10 mb-5">
                     @include('partials.errors')

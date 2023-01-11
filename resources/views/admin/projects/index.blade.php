@@ -3,7 +3,7 @@
 <div class="container mt-4">
     
      <div class="container mt-4">
-        <h3 class="text-center">Projects List</h3>
+        <h3 class="text-center text-danger fw-bold">Projects List</h3>
         <div class="row justify-content-center">
             <div class="col-8">
                  <div class="text-end mb-4">

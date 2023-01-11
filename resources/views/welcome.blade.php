@@ -19,15 +19,15 @@
            <div class="dashboard-icons">
                             <div class="feature">
                                 <i class="fa-solid fa-folder-tree text-danger"></i>
-                                <span class="fs-1">Access all your Projects</span>
+                                <span class="fs-1 text-center">Access all your Projects</span>
                             </div>
                             <div class="feature">
                                 <i class="fa-solid fa-database text-danger"></i>
-                                <span class="fs-1">Store them all in one place</span>
+                                <span class="fs-1 text-center">Store them all in one place</span>
                             </div>
                              <div class="feature">
                                 <i class="fa-solid fa-file-pen text-danger"></i>
-                                <span class="fs-1">Save and edit instantly</span>
+                                <span class="fs-1 text-center">Save and edit instantly</span>
                             </div>
                         </div>
     </div>
