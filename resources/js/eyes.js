@@ -1,29 +1,32 @@
-document.addEventListener("mousemove", (e) => {
-    const mouseX = e.clientX;
-    const mouseY = e.clientY;
+const morty = document.getElementById("morty");
 
-    const morty = document.getElementById("morty");
-    const rekt = morty.getBoundingClientRect();
-    const mortyX = rekt.left + rekt.width / 2;
-    const mortyY = rekt.top + rekt.height / 2;
+if (morty) {
+    document.addEventListener("mousemove", (e) => {
+        const mouseX = e.clientX;
+        const mouseY = e.clientY;
 
-    const angleDeg = angle(mouseX, mouseY, mortyX, mortyY);
+        const rekt = morty.getBoundingClientRect();
+        const mortyX = rekt.left + rekt.width / 2;
+        const mortyY = rekt.top + rekt.height / 2;
 
-    const eyeAngle = 90 + angleDeg;
+        const angleDeg = angle(mouseX, mouseY, mortyX, mortyY);
 
-    const eyes = document.querySelectorAll(".eye");
-    eyes.forEach((eye) => {
-        eye.style.transform = `rotate(${eyeAngle}deg)`;
+        const eyeAngle = 90 + angleDeg;
+
+        const eyes = document.querySelectorAll(".eye");
+        eyes.forEach((eye) => {
+            eye.style.transform = `rotate(${eyeAngle}deg)`;
+        });
     });
-});
 
-function angle(cx, cy, ex, ey) {
-    const dy = ey - cy;
-    const dx = ex - cx;
+    function angle(cx, cy, ex, ey) {
+        const dy = ey - cy;
+        const dx = ex - cx;
 
-    const rad = Math.atan2(dy, dx);
-    // console.log("rad", cy);
-    const deg = (rad * 180) / Math.PI;
+        const rad = Math.atan2(dy, dx);
+        // console.log("rad", cy);
+        const deg = (rad * 180) / Math.PI;
 
-    return deg;
+        return deg;
+    }
 }
