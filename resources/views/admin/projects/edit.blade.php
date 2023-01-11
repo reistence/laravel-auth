@@ -4,7 +4,8 @@
     <div class="container">
         <h1 class="class="text-center mt-3">Edit: {{$project->title}}</h1>
          <div class="row justify-content-center">
-                <div class="col-10 mb-5">
+             <div class="col-10 mb-5">
+                    @include('partials.errors')
                     <form class="" action="{{route('admin.projects.update', $project->slug)}}" method="POST">
                         @csrf
                         @method('PUT')
@@ -15,9 +16,7 @@
                         <div class="mb-2">
                             <label for="thumb">Description</label>
                             <textarea class="form-control" id="description" name="description"
-                            rows="10">
-                            {{$project->description}}
-                            </textarea>
+                            rows="10">{{$project->description}}</textarea>
                         </div>
                         <button class="btn btn-danger" type="submit">Add</button>
                     </form>
