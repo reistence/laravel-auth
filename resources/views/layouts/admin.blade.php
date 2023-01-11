@@ -50,11 +50,6 @@
         <div class="layer"></div>
         {{-- /Header --}}
 
-
-
-
-
-
         <div class="container-fluid vh-100">
             <div class="row h-100">
                 {{-- Sidebar --}}
@@ -90,3 +85,4 @@
     
 </body>
 </html>
+

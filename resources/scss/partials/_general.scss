@@ -10,6 +10,28 @@ body {
     height: 100%;
 }
 
+//DASHBOARD
+.dashboard-icons {
+    margin-top: 2em;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 1em;
+}
+
+.dashboard-icons > .feature {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+    align-items: center;
+}
+
+.feature > i {
+    font-size: 5rem;
+}
+
+//MODAL
+
 .mymod {
     position: absolute;
     top: 50%;

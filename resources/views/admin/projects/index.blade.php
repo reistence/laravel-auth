@@ -35,7 +35,7 @@
                                         <i class="fa-solid fa-pencil"></i>
                                     </a>
                                      <button type="button" class="del btn btn-dark">
-                                        <i class="fa-solid fa-trash text-danger"></i>
+                                        <i class="fa-solid fa-circle-xmark text-danger"></i>
                                     </button>
                                      <form class="mymod"  tabindex="-1"action="{{route('admin.projects.destroy', $project->slug)}}" method="POST">
                                         @csrf
