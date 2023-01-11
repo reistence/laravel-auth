@@ -5,7 +5,7 @@
         <h1 class="class="text-center mt-3">Add a new Project</h1>
          <div class="row justify-content-center">
                 <div class="col-10 mb-5">
-                    <form class="" action="{{route('admin.projects.update')}}" method="POST">
+                    <form class="" action="{{route('admin.projects.store')}}" method="POST">
                         @csrf
                         <div class="mb-2">
                             <label for="title">Title</label>

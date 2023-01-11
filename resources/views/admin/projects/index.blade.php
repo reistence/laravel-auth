@@ -7,7 +7,7 @@
         <div class="row justify-content-center">
             <div class="col-8">
                  <div class="text-end mb-4">
-                {{-- <a href="{{ route('admin.projects.create') }}" class="btn btn-dark">Add a new Project</a> --}}
+                <a href="{{ route('admin.projects.create') }}" class="btn btn-dark">Add a new Project</a>
             </div>
                 <table class="table">
                     <thead>
