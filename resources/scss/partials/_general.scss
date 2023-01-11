@@ -16,17 +16,39 @@ body {
     position: relative;
     width: 100%;
     margin-bottom: 2em;
-    height: max-content;
+    height: 400px;
 }
 
-.myjumbotron > img {
+.myjumbotron > .waves {
     width: 100% !important;
+    height: 100%;
     position: absolute;
     top: 0;
     left: 0;
-    z-index: 0;
+    z-index: 1;
     object-fit: cover;
     // aspect-ratio: 1 /5;
+}
+
+.myjumbotron > #morty {
+    position: absolute;
+    right: 85px;
+    bottom: 50px;
+    z-index: 0;
+}
+
+#left-eye {
+    position: absolute;
+    top: 190px;
+    right: 225px;
+    border-radius: 5px;
+}
+
+#right-eye {
+    position: absolute;
+    top: 193px;
+    right: 165px;
+    border-radius: 5px;
 }
 
 .myjumbotron > .container,
@@ -35,7 +57,7 @@ p {
     position: relative;
     bottom: 0;
     left: 0;
-    z-index: 1 !important;
+    z-index: 5 !important;
 }
 
 //DASHBOARD

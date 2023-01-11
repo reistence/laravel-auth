@@ -2,7 +2,13 @@
 @section('content')
 
 <div class="myjumbotron p-5 mb-4  text-white rounded-3">
-    <img src="{{Vite::asset('resources/img/wave.svg')}}" alt="" srcset="">
+    <img class="waves" src="{{Vite::asset('resources/img/wave.svg')}}" alt="" srcset="">
+    <img id="morty" src="{{Vite::asset('resources/img/morty.png')}}" alt="" srcset="">
+        
+            <img id="right-eye" class="eye" src="{{Vite::asset('resources/img/eye.jpeg')}}" alt="" srcset="">
+            <img id="left-eye" class="eye" src="{{Vite::asset('resources/img/eye.jpeg')}}" alt="" srcset="">
+    
+            
     <div class="container py-5">
     
         <h1 class="display-5 fw-bold">
