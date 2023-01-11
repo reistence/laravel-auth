@@ -84,7 +84,7 @@ class ProjectController extends Controller
         $data = $request->validated();
         $data["slug"] = Project::generateSlug($data["title"]);
         $project->update($data);
-        return redirect()->route("admin.projects.index")->with("$project->title has been successfully edited." );
+        return redirect()->route("admin.projects.index")->with("message","$project->title has been successfully edited." );
 
     }
 
@@ -96,6 +96,7 @@ class ProjectController extends Controller
      */
     public function destroy(Project $project)
     {
-        //
+        $project->delete();
+        return redirect()->route("admin.projects.index")->with("message", "$project->title has been deleted");
     }
 }
