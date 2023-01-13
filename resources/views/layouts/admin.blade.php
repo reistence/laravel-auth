@@ -47,13 +47,13 @@
                 </div>
             </div>
         </header>
-        <div class="layer"></div>
+       
         {{-- /Header --}}
 
         <div class="container-fluid vh-100">
-            <div class="row h-100">
+            <div class="row h-100 ">
                 {{-- Sidebar --}}
-                <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-dark navbar-dark sidebar collapse">
+                <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-dark navbar-dark sidebar collapse border-end border-danger">
                     <div class="position-sticky pt-3">
                         <ul class="nav flex-column mb-4">
                             <li class="nav-item">
@@ -76,7 +76,7 @@
 
         {{-- /Sidebar --}}
         {{-- Main--}}
-        <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+        <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4 bg-dark">
             @yield('content')
         </main>
         {{--/ Main--}}

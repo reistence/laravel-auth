@@ -1,7 +1,6 @@
 @extends('layouts.admin')
 @section('content')
-<div class="container mt-4">
-    
+<div class="container mt-4  prova">
      <div class="container mt-4">
         <h3 class="text-center text-danger fw-bold">Projects List</h3>
         <div class="row justify-content-center">
@@ -14,7 +13,7 @@
                         {{ session('message') }}
                     </div>
                 @endif
-                <table class="table">
+                <table class="table text-white">
                     <thead>
                         <tr>
                             <th scope="col">Title:</th>
@@ -25,20 +24,21 @@
                     </thead>
                     <tbody>
                         @foreach ($projects as $project)
-                            <tr >
+                            <tr class="position-relative" >
+                                
                                 <th scope="row">{{ $project->title }}</th>
                                 <td>{{ $project->created_at }}</td>
                                  <td id="img-index-td" class="">
                                     @if ($project->cover_image)
-                                        <img class="" src="{{ asset('storage/' . $project->cover_image) }}"
+                                        <img class=" rounded-4" src="{{ asset('storage/' . $project->cover_image) }}"
                                             alt="">
                                     @else
                                         
-                                          <img class="" src="{{Vite::asset('resources/img/dark-placeholder.png')}}" alt="Img unavailable">
+                                          <img class="rounded-4" src="{{Vite::asset('resources/img/dark-placeholder.png')}}" alt="Img unavailable">
                                         
                                     @endif
                                 </td>
-                                <td >
+                                <td  class="">
                                     <a class="btn btn-dark" href="{{ route('admin.projects.show', $project->slug) }}">
                                         <i class="fa-solid fa-eye"></i>
                                     </a>
@@ -56,6 +56,9 @@
                                         <button class="mybtn btn btn-danger" type="submit">Delete</button>
                                         <button type="button" class="dismissBtn btn btn-light">Dismiss</button>
                                     </form>
+                                <div class="layer"></div>
+
+
 
                                 </td>
                             </tr>

@@ -3,8 +3,8 @@
 <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-8">
-                <div class="card mt-4">
-                    <div class="card-header">{{ __('Dashboard') }}</div>
+                <div class="card mt-4 bg-dark border border-danger text-white">
+                    <div class="card-header border-bottom border-light">{{ __('Dashboard') }}</div>
 
                     <div class="card-body">
                         @if (session('status'))

@@ -1,7 +1,7 @@
 const del = document.getElementsByClassName("del");
 const mymod = document.getElementsByClassName("mymod");
 const dismissBtn = document.getElementsByClassName("dismissBtn");
-const layer = document.querySelector(".layer");
+const layers = document.getElementsByClassName("layer");
 let somethingOpen = false;
 
 for (let index = 0; index < del.length; index++) {
@@ -10,7 +10,16 @@ for (let index = 0; index < del.length; index++) {
         if (!somethingOpen) {
             mymod[index].style.display = "block";
             somethingOpen = !somethingOpen;
-            layer.style.display = "block";
+            for (let i = 0; i < layers.length; i++) {
+                const layer = layers[i];
+                layer.style.display = "block";
+            }
+
+            // const y = mymod.getBoundingClientRect().top + window.scrollY;
+            // window.scrollTo({
+            //     top: 0,
+            //     behavior: "smooth",
+            // });
         }
     });
 }
@@ -20,7 +29,10 @@ for (let index = 0; index < dismissBtn.length; index++) {
         if (somethingOpen) {
             mymod[index].style.display = "none";
             somethingOpen = !somethingOpen;
-            layer.style.display = "none";
+            for (let i = 0; i < layers.length; i++) {
+                const layer = layers[i];
+                layer.style.display = "none";
+            }
         }
     });
 }

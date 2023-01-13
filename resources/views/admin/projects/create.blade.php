@@ -1,7 +1,7 @@
 @extends('layouts.admin')
 @section('content')
 <div class="container mt-4">
-    <div class="container">
+    <div class="container text-white">
          <div class="text-start mb-4">
                 <a href="{{ route('admin.projects.index') }}" class="btn btn-danger"><i class="fa-solid fa-angles-left"></i></a>
             </div>
@@ -13,17 +13,17 @@
                         @csrf
                         <div class="mb-2">
                             <label for="title">Title</label>
-                            <input type="text" class="form-control" id="title" name="title" value="{{ old('title') }}">
+                            <input type="text" class="form-control bg-dark text-white" id="title" name="title" value="{{ old('title') }}">
                         </div>
 
                          <div class="form-group mb-2">
                         <label for="cover_image">Image</label>
                         <input type="file" name="cover_image" id="cover_image"
-                            class="form-control @error('cover_image')
+                            class="form-control bg-dark text-white @error('cover_image')
                             is-invalid
                         @enderror">
                         @error('cover_image')
-                            <div class="invalid-feedback">
+                            <div class="invalid-feedback rounded-4">
                                 {{ $message }}
                             </div>
                         @enderror
@@ -37,7 +37,7 @@
 
                         <div class="mb-2">
                             <label for="thumb">Description</label>
-                            <textarea class="form-control" id="description" name="description"
+                            <textarea class="form-control bg-dark text-white" id="description" name="description"
                             rows="10">{{ old('description') }}</textarea>
                         </div>
                         <button class="btn btn-danger" type="submit">Add</button>
