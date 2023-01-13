@@ -2,6 +2,9 @@
 @section('content')
 <div class="container mt-4">
     <div class="container">
+         <div class="text-start mb-4">
+                <a href="{{ route('admin.projects.index') }}" class="btn btn-danger"><i class="fa-solid fa-angles-left"></i></a>
+            </div>
         <h1 class="text-center mt-3 text-danger fw-bold">Edit: {{$project->title}}</h1>
          <div class="row justify-content-center">
              <div class="col-10 mb-5">
@@ -18,9 +21,9 @@
                         <label for="cover_image">Image</label>
                         <input type="file" name="cover_image" id="cover_image" class="form-control">
 
-                        {{-- Preview dell'immagine esistente --}}
-                        <div class="mt-3" style="max-height: 200px">
-                            <img id="image_preview" src="{{ asset('storage/' . $project->cover_image) }}"
+                        {{-- Preview img --}}
+                        <div class="mt-3 w-50" style="max-height: 200px">
+                            <img class="w-75" id="image_preview" src="{{ asset('storage/' . $project->cover_image) }}"
                                 alt="{{ $project->title . ' image' }}">
                         </div>
                     </div>

@@ -2,7 +2,10 @@
 @section('content')
 <div class="container mt-4">
     <div class="container">
-        <h1 class="class="text-center mt-3">Add a new Project</h1>
+         <div class="text-start mb-4">
+                <a href="{{ route('admin.projects.index') }}" class="btn btn-danger"><i class="fa-solid fa-angles-left"></i></a>
+            </div>
+        <h1 class="text-center mt-3">Add a new Project</h1>
          <div class="row justify-content-center">
                 <div class="col-10 mb-5">
                     @include('partials.errors')
@@ -25,11 +28,11 @@
                             </div>
                         @enderror
 
-                        {{-- Img preview --}}
-                        {{-- <div class="mt-3">
+                        {{-- Img preview  --}}
+                         <div class="mt-3">
                             <img id="image_preview" src="" alt="" style="max-height: 200px">
                         </div>
-                    </div> --}}
+                    </div>
 
 
                         <div class="mb-2">
