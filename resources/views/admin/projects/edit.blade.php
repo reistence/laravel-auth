@@ -6,7 +6,7 @@
          <div class="row justify-content-center">
              <div class="col-10 mb-5">
                     @include('partials.errors')
-                    <form class="" action="{{route('admin.projects.update', $project->slug)}}" method="POST">
+                    <form class="" action="{{route('admin.projects.update', $project->slug)}}" method="POST" enctype="multipart/form-data">
                         @csrf
                         @method('PUT')
                         <div class="mb-2">
