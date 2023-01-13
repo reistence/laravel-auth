@@ -7,6 +7,7 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\StoreProjectRequest;
 use App\Http\Requests\UpdateProjectRequest;
 use App\Models\Project;
+use Illuminate\Contracts\Cache\Store;
 use Illuminate\Support\Facades\Storage;
 
 class ProjectController extends Controller
@@ -51,6 +52,7 @@ class ProjectController extends Controller
             $data["cover_image"] = $path;
         }
         $project = Project::create($data);
+        // dd($project);
         return redirect()->route("admin.projects.index")->with("message", "Your Project has been successfully added.");
     }
 
@@ -87,6 +89,13 @@ class ProjectController extends Controller
     {
         $data = $request->validated();
         $data["slug"] = Project::generateSlug($data["title"]);
+
+        if ($request->hasFile("cover_image")){
+            if($project->cover_image) Storage::delete("project_images", $request->cover_image);
+            $path = Storage::put("project_images", $request->cover_image);
+            $data["cover_image"] = $path;
+        }
+
         $project->update($data);
         return redirect()->route("admin.projects.index")->with("message","$project->title has been successfully edited." );
 

@@ -25,11 +25,13 @@
                             </div>
                         @enderror
 
-                        {{-- Image preview --}}
-                        <div class="mt-3">
+                        {{-- Img preview --}}
+                        {{-- <div class="mt-3">
                             <img id="image_preview" src="" alt="" style="max-height: 200px">
                         </div>
-                    </div>
+                    </div> --}}
+
+
                         <div class="mb-2">
                             <label for="thumb">Description</label>
                             <textarea class="form-control" id="description" name="description"

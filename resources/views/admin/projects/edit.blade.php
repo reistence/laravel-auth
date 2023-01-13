@@ -13,6 +13,19 @@
                             <label for="title">Title</label>
                             <input type="text" class="form-control" id="title" name="title" value="{{$project->title}}">
                         </div>
+
+                        <div class="form-group mb-3">
+                        <label for="cover_image">Image</label>
+                        <input type="file" name="cover_image" id="cover_image" class="form-control">
+
+                        {{-- Preview dell'immagine esistente --}}
+                        <div class="mt-3" style="max-height: 200px">
+                            <img id="image_preview" src="{{ asset('storage/' . $project->cover_image) }}"
+                                alt="{{ $project->title . ' image' }}">
+                        </div>
+                    </div>
+
+
                         <div class="mb-2">
                             <label for="thumb">Description</label>
                             <textarea class="form-control" id="description" name="description"

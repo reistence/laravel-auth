@@ -25,20 +25,20 @@
                     </thead>
                     <tbody>
                         @foreach ($projects as $project)
-                            <tr>
+                            <tr >
                                 <th scope="row">{{ $project->title }}</th>
                                 <td>{{ $project->created_at }}</td>
-                                 <td>
+                                 <td id="img-index-td" class="">
                                     @if ($project->cover_image)
-                                        <img class="w-50" src="{{ asset('storage/' . $project->cover_image) }}"
+                                        <img class="" src="{{ asset('storage/' . $project->cover_image) }}"
                                             alt="">
                                     @else
-                                        <div class="w-50 bg-secondary py-4 text-center">
-                                            No image yet
-                                        </div>
+                                        
+                                          <img class="" src="{{Vite::asset('resources/img/dark-placeholder.png')}}" alt="Img unavailable">
+                                        
                                     @endif
                                 </td>
-                                <td>
+                                <td >
                                     <a class="btn btn-dark" href="{{ route('admin.projects.show', $project->slug) }}">
                                         <i class="fa-solid fa-eye"></i>
                                     </a>
@@ -48,7 +48,7 @@
                                      <button type="button" class="del btn btn-dark">
                                         <i class="fa-solid fa-circle-xmark text-danger"></i>
                                     </button>
-                                     <form class="mymod"  tabindex="-1"action="{{route('admin.projects.destroy', $project->slug)}}" method="project">
+                                     <form class="mymod"  tabindex="-1"action="{{route('admin.projects.destroy', $project->slug)}}" method="POST">
                                         @csrf
                                         @method('DELETE')
                                         <h3>Delete: {{$project->title}}</h3>
