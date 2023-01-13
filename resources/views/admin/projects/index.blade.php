@@ -13,7 +13,7 @@
                         {{ session('message') }}
                     </div>
                 @endif
-                <table class="table text-white">
+                <table class="table  table-dark table-hover text-white ">
                     <thead>
                         <tr>
                             <th scope="col">Title:</th>
@@ -22,7 +22,7 @@
                             <th scope="col">Actions: </th>
                         </tr>
                     </thead>
-                    <tbody>
+                    <tbody class="table-group-divider border-top border-danger">
                         @foreach ($projects as $project)
                             <tr class="position-relative" >
                                 
